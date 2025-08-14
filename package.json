@@ -1,14 +1,14 @@
 {
 	"name": "vibe-functions",
-	"version": "1.0.1",
+	"version": "2.0.0",
 	"description": "Easiest way to make your app AI native.",
 	"main": "index.js",
 	"types": "lib/index.d.ts",
 	"type": "module",
 	"scripts": {
 		"build": "tsc",
-		"prepare": "npm run build",
-		"test": "bun test"
+		"prepare": "bun run build",
+		"test": "bun test --timeout 10000"
 	},
 	"repository": {
 		"type": "git",

@@ -88,7 +88,7 @@ const isEven = defineVibeFunction("isEven");
 
 const number = 42;
 const result = await isEven(number);
-console.log(result); // "true"
+console.log(result); // true
 ```
 
 ### Sort an Array
@@ -100,7 +100,7 @@ const sort = defineVibeFunction("sort");
 
 const numbers = [2, 5, 1, 4, 33];
 const sortedNumbers = await sort(numbers);
-console.log(sortedNumbers); // "[1,2,4,5,33]"
+console.log(sortedNumbers); // [1, 2, 4, 5, 33]
 ```
 
 ### Uppercase a String
@@ -126,9 +126,40 @@ const numbers = [2, 7, 11, 15];
 const target = 9;
 
 const result = await twoSum(numbers, target);
-console.log(result); // "[0,1]"
+console.log(result); // [0, 1]
+```
+
+### Check if Two Words are Synonyms
+
+```js
+import { defineVibeFunction } from "vibe-functions";
+
+const isSynonym = defineVibeFunction("isSynonym");
+
+const trueResult = await isSynonym("happy", "joyful");
+console.log(trueResult); // true
+
+const falseResult = await isSynonym("happy", "sad");
+console.log(falseResult); // false
+```
+
+## Testing
+
+This project uses Bun's built-in test runner. The test file is located in the `test/` directory.
+
+To test the library and see it in action, you can run the tests:
+
+```bash
+# Run all tests
+bun run test
+
+# Run a specific test
+bun run test -t "checks if number is even"
+
+# Run tests for a specific function
+bun run test -t "isEven"
 ```
 
 ## License
 
-MIT.
+[MIT](LICENSE).
